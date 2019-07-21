@@ -35,7 +35,7 @@ app.get('/DB', (req, res) => {
 );
 
 //insert picture into my DB
-app.get('/UploadPicture', (req, res) => {
+app.post('/UploadPicture', (req, res) => {
             connection.query('INSERT INTO pictures SET ?', req.body, (error, results, fields) => {
                 if (error) throw error;
                 //  Neat!
